@@ -1,0 +1,25 @@
+﻿@model ExamenPrograJeancarlosBarberena.Models.Estudiantes
+
+@{
+    ViewData["Title"] = "VerEstudiante";
+}
+
+<h1>Estudiantes</h1>
+
+<div class="card" style="width: 18rem;">
+  <img src="https://www.tec.ac.cr/hoyeneltec/sites/default/files/styles/colorbox/public/media/img/main/estudiantes_examen-tec.jpg" class="card-img-top" title="Imagen Estudiantes">
+  <div class="card-body">
+    <h5 class="card-title">Estudiantes</h5>
+    <p class="card-text">Lista de estudiantes registrados.</p>
+  </div>
+  <ul class="list-group list-group-flush">
+    <li class="list-group-item">@Model.nombreCompletoEstudiante</li>
+    <li class="list-group-item">@Model.carreraEstudiante</li>
+    <li class="list-group-item">@Model.edadEstudiante</li>
+    <li class="list-group-item">@Model.cursosEstudiante</li>
+  </ul>
+  <div class="card-body">
+    <a asp-action="VerProfesor" class="card-link">Lista Profesores</a>
+    <a asp-action="Index" class="card-link">Página Principal</a>
+  </div>
+</div>

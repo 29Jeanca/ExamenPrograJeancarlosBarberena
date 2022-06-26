@@ -1,0 +1,16 @@
+﻿@model ExamenPrograJeancarlosBarberena.Models.Profesores
+@{
+    ViewData["Title"] = Model.nombreCompletoProfesor +"VerProfesor";
+}
+<h1>Profesores</h1>
+<center><div class="card" style="width: 18rem;">
+  <ul class="list-group list-group-flush">
+    <li class="list-group-item">@Model.nombreCompletoProfesor</li>
+    <li class="list-group-item">@Model.cedulaProfesor</li>
+    <li class="list-group-item">@Model.areaConocimiento</li>
+  </ul>
+  <div class="card-footer">
+    <img src="https://www.vectorizados.com/muestras/2014/11/profesor-de-informatica-.jpg" style="width:500px"/>
+  </div>
+</div>
+</center>

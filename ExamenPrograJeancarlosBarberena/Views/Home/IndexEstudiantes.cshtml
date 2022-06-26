@@ -1,0 +1,18 @@
+﻿@model IEnumerable<Estudiantes>
+@{
+    ViewData["Estudiantes"] = "Página Estudiantes";
+}
+{
+    <h2>Buscar</h2>
+    <form asp-action="Buscar">
+        <input type="text" name="texto" id="texto"></input>
+        <button type="submit">Buscar</button>
+    </form>
+    <h2>Profesores</h2>
+@foreach (var item in Model)
+{
+    <h3><a asp-action="VerEstudiante" asp-route-id="@item.ID">
+    @item.nombreCompletoEstudiante
+    </a></h3>
+  <h2>@item.carreraEstudiante</h2>
+}
